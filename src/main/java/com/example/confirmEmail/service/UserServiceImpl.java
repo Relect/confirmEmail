@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
 
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(user.getEmail());
-        mailMessage.setSubject("Complete Registration!");
+        mailMessage.setSubject("Continue Registration");
         mailMessage.setText("To confirm your account, please click here:"
                 + confirmUrl + confirmToken.getToken());
         emailService.sendEmail(mailMessage);

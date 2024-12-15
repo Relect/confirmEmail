@@ -4,11 +4,11 @@
     user_name VARCHAR(200),
     email VARCHAR(200) UNIQUE,
     password VARCHAR(200),
-    is_enabled boolean DEFAULT false)
+    is_enabled boolean DEFAULT false);
 
-    CREATE TABLE confirm(
+    CREATE TABLE confirm (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     token VARCHAR(255),
     created TIMESTAMP,
     user_id BIGINT,
-    FOREIGN KEY (user_id) REFERENCES users(id))
+    FOREIGN KEY (user_id) REFERENCES users(id));
